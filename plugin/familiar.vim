@@ -8,7 +8,7 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-" syntax enable
+syntax enable
 set modeline
 set tw=79
 set fo=tcroqj
@@ -69,9 +69,9 @@ endif
 if has("autocmd")
   au Filetype c setlocal ts=8 sts=0 sw=8 noet
   au Filetype cpp setlocal ts=8 sts=0 sw=8 noet
-  au Filetype python setlocal ts=4 sts=0 sw=4 et
-  au Filetype html setlocal ts=2 sts=0 sw=2 et
-  au Filetype javascript setlocal ts=4 sts=0 sw=4 noet
-  au Filetype make noet
+  au Filetype python setlocal ts=8 sts=0 sw=4 et
+  au Filetype html setlocal ts=8 sts=0 sw=2 et
+  au Filetype javascript setlocal ts=8 sts=0 sw=4 noet
+  au Filetype make setlocal noet
 endif
 
