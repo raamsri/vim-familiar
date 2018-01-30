@@ -10,7 +10,7 @@ endif
 
 syntax enable
 set modeline
-set tw=79
+" set tw=79
 set fo-=l
 set fo+=tcroqj
 set ai
@@ -68,13 +68,16 @@ if has("autocmd")
 endif
 
 if has("autocmd")
+  au BufNewFile,BufReadPost *.md set filetype=markdown
+endif
+
+if has("autocmd")
   au Filetype c setlocal ts=8 sts=0 sw=8 noet fo-=l fo+=tcroqj
   au Filetype cpp setlocal ts=8 sts=0 sw=8 noet fo-=l fo+=tcroqj
   au Filetype python setlocal ts=8 sts=0 sw=4 et
   au Filetype html setlocal ts=8 sts=0 sw=2 et
   au Filetype javascript setlocal ts=8 sts=0 sw=4 noet
   au Filetype make setlocal noet
-  au BufNewFile,BufReadPost *.md set filetype=markdown
-  au Filetype markdown setlocal ts=8 sts=0 sw=4 et tw=72
+  au Filetype markdown setlocal ts=8 sts=0 sw=4 et tw=72 fo-=l fo+=wtcroqj
 endif
 
